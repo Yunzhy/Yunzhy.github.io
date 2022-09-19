@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<style>
+h1{
+  color:red;
+  font-size:40px;
+}
+p{
+  color:blue;
+  font-size:30px;
+}
+td{
+     width: 200px;
+	 height:200px;
+	 border:1px solid yellow;
+	 background-color:pink;
+	 text-align:center;
+}
+img{
+    width: 180px;
+	height:180px;
+	border:1px solid cyan;
+}
+</style>
+ </head>
+ <body>
+ <h1>
+ 网页-表格+插图+超链接
+ </h1>
+ <table>
+   <tr>
+    <td>
+  <a href="https://www.pku.edu.cn/" target="_BLANK">
+   <img src="zzz/人像.jpg" alt="this is me">
+  </a>
+	</td>
+    <td>
+	  <a href="https://web.mit.edu/" target="_BLANK">
+	  <img src="zzz/人像.jpg" alt="this is me">
+	  </a>
+	</td>
+    <td>
+	  <a href="https://www.sohu.com" target="_BLANK">
+	  <img src="zzz/人像.jpg" alt="this is me">
+	  </a>
+	</td>
+   </tr>
+   <tr>
+    <td>
+	  <a href="http://jx.gov.cn" target="_BLANK">
+	  <img src="zzz/人像.jpg" alt="this is me">
+	  </a>
+	</td>
+    <td>
+	  <a href="https://www.pku.edu.cn/" target="_BLANK">
+	  <img src="zzz/人像.jpg" alt="this is me">
+	  </a>
+	</td>
+    <td>
+	  <a href="https://www.pku.edu.cn/" target="_BLANK">
+	  <img src="zzz/人像.jpg" alt="this is me">
+	  </a>
+	</td>
+   </tr>
+ </table>
+ <p>
+ 20203030钟宏云
+ </p>
+ </body>
+</html>

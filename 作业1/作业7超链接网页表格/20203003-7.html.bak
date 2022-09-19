@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title> 
+   <style type="text/css">
+/*div{
+    border:1px solid green;
+    height:200px;
+	margin:7px;
+}*/
+body{
+     height:600px;
+}
+#title{
+       background:url("zzz/ydh.png")no-repeat right;
+       height:5%；
+	   padding-top:0.5em;
+       padding-bottom:0.5em;
+}
+#nav{
+     height:10%;
+	 background-color:navy;
+	 color:white;
+	
+}
+img{
+     
+	 
+}
+#photo{
+      width:65%;
+	  float:left;
+	  height:60%;
+}
+#news{
+      width:31%;
+	  height:60%;
+	  float:right;
+      color:navy;
+	  line-height:2.5em;
+}
+td{
+    width:10%;
+	text-align:center;
+	padding-top:1em;
+    padding-bottom:1em;
+	
+}
+  </style>
+ </head>
+ <body>
+ <div id="title" class="">
+  <img src="zzz/ncu.png" width="" height="" border="0" alt="">
+ </div>
+<div id="nav" class="">
+ <table>
+ 
+	<tr>
+		<td>首页</td>
+		<td>学校概况</td>
+		<td>学院与学科</td>
+		<td>职能部门</td>
+		<td>人才培养</td>
+		<td>科学研究</td>
+		<td>招生就业</td>
+		<td>管理与服务</td>
+	</tr>
+ </table>
+ 
+</div>
+<div id="photo" class="">
+ <img src="zzz/photo.png" width="100%" height="100%" border="0" alt="">
+</div>
+<div id="news" class="">
+    <h1>学校新闻</h1>
+     <a href="1">
+	  科技自立自强助推江西绿色食品产业高质量发...<br>
+     </a>
+    <a href="1">
+       聚焦生物医药产业 助力健康中国发展<br>
+    </a>
+    <a href="1">
+       专家学者共话新时代旅游产业高质量发展<br>
+    </a>
+    <a href="1">
+      有色金属与先进材料论坛助推产业链与创新链...<br>
+    </a>
+    <a href="1">
+       《江西日报》头版报道我校办学100周年发...<br>
+    </a>
+    <a href="1">
+	南昌大学办学100周年发展大会召开<br>
+    </a>
+    <a href="1">
+	周创兵：爱国、自强、创新、唯实，栉风沐雨...<br>
+    </a>
+</div>
+ </body>
+</html>

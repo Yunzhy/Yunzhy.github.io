@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+ <head>
+ <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+
+    body{
+      border:2px solid black;
+	  height:500px;
+	  width: 400px;
+	  margin:100px;
+	  background:url("zzz/light.png");
+   }
+    div{
+     border:1px solid green;
+	 height:40%;
+	 width:80%;
+	 margin:10%;
+	 text-align:center;
+	 background-color:cyan;
+   }
+
+    img{
+     width:50%;
+	 height:50%;
+	 padding:5%;
+   }
+
+    p{
+  font-size:40px;
+  color:black;
+  text-indent:1em;
+  font-family:汉仪仿宋简;
+   }
+
+  </style>
+
+ </head>
+
+ <body>
+
+  <div>
+   <img src="../zzz/zhy.jpg" width="100%" height="100%" border="0" alt="">
+  </div>
+
+  <div>
+
+   <p>
+
+   </p>这是软件动漫学院傍晚的景色，匆忙上课的学生和缓缓下移动的夕阳总是无法相遇。
+   </p>大学的生活总是疲于上课疲于休息，或许我们应该停下脚步.看一看四周想一想明天的日出。
+
+   </p>
+
+  </div>
+
+ </body>
+</html>

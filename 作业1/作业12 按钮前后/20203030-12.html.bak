@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+	
+  </style>
+  <script type="text/javascript">
+   var ts="1[唐]杜甫《八阵图》\n功盖三分国，名成八阵图。\n江流石不转，遗恨失吞吴。\n2[唐]杜甫《春望》\n国破山河在，城春草木深。\n感时花溅泪，恨别鸟惊心。\n烽火连三月，家书抵万金。\n白头搔更短，浑欲不胜簪。\n 3[唐]杜甫《闻官军收河南河北》\n剑外忽传收蓟北，初闻涕泪满衣裳。\n却看妻子愁何在，漫卷诗书喜欲狂。\n白日放歌须纵酒，青春作伴好还乡。\n即从巴峡穿巫峡，便下襄阳向洛阳。\n4[唐]杜甫《古柏行》\n孔明庙前有老柏，柯如青铜根如石。\n霜皮溜雨四十围，黛色参天二千尺。\n君臣已与时际会，树木犹为人爱惜。\n云来气接巫峡长，月出寒通雪山白。\n忆昨路绕锦亭东，先主武侯同閟宫。\n崔嵬枝干郊原古，窈窕丹青户牖空。\n落落盘踞虽得地，冥冥孤高多烈风。\n扶持自是神明力，正直原因造化功。\n大厦如倾要梁栋，万牛回首丘山重。\n不露文章世已惊，未辞翦伐谁能送。\n苦心岂免容蝼蚁，香叶终经宿鸾凤。\n志士幽人莫怨嗟，古来材大难为用。\n5[唐]杜甫《江南逢李龟年》\n岐王宅里寻常见，崔九堂前几度闻。\n正是江南好风景，落花时节又逢君。\n 6[唐]杜甫《宿府》\n清秋幕府井梧寒，独宿江城蜡炬残。\n永夜角声悲自语，中天月色好谁看。\n风尘荏苒音书绝，关塞萧条行路难。\n已忍伶俜十年事，强移栖息一枝安。\n 7[唐]杜甫《哀江头》\n少陵野老吞声哭，春日潜行曲江曲。\n江头宫殿锁千门，细柳新蒲为谁绿。\n忆昔霓旌下南苑，苑中万物生颜色。\n昭阳殿里第一人，同辇随君侍君侧。\n辇前才人带弓箭，白马嚼啮黄金勒。\n翻身向天仰射云，一笑正坠双飞翼。\n明眸皓齿今何在，血污游魂归不得。\n清渭东流剑阁深，去住彼此无消息。\n人生有情泪沾臆，江水江花岂终极。\n黄昏胡骑尘满城，欲往城南望南北。\n 8[唐]杜甫《别房太尉墓》\n他乡复行役，驻马别孤坟。\n近泪无干土，低空有断云。\n对棋陪谢傅，把剑觅徐君。\n唯见林花落，莺啼送客闻。";
+  </script>
+ </head>
+ <body>
+  <p id="output">Iamfine</p>
+  <button id="next">next</button>
+  <button id="prev">prev</button>
+  <script type="text/javascript">
+  <!--
+	var myp=document.getElementById("output");
+    var next=document.getElementById("next");
+	var prev=document.getElementById("prev");
+	var ts300=ts.split("\n");
+	var i=0;
+	myp.textContent=ts300[i];
+	next.onclick=function(){
+	   if(i<ts300.length){
+	   i++;
+	   myp.textContent=ts300[i];
+	    }
+	}
+	 prev.onclick=function(){
+		if(i>0){
+		i--;
+        myp.textContent=ts300[i];
+		}
+	}
+  //-->
+  </script>
+ </body>
+</html>

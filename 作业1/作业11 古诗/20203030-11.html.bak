@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+    body{
+	    font-size:30px;
+		width:600px;
+		position:relative;
+		margin:0;
+		background-color:#8cf;
+		
+	}
+	div{
+	    font-size:1.3em;
+		width:80%;		
+		margin:1em auto;
+	}
+	#title{
+	      font-size:1.5em;
+		  text-align:center;
+		  color:red;
+		  position:relative;
+            left:290px;
+		    top:10px;
+			margin-bottom:30px;;
+	}
+	#content1{
+	       /* float:left;*/
+			line-height:2em;
+            position:relative;
+            left:320px;
+		    top:10px;
+			margin-top:0;
+	}
+/*	#content2{
+	        float:right;
+			line-height:2em;
+	}*/
+	#bg{
+	    position:absolute;
+        font-size:10em;
+		left:430px;
+		top:100px;
+        margin:0;
+		opacity:0.15;
+		color:#333;
+		font-family:方正舒体;
+	}
+	#writer{
+	      font-size:1.2em;
+		  text-align:center;
+		  color:green;
+		  position:relative;
+            left:350px;
+		    top:2px;
+	    margin:0;
+	}
+  </style>
+ </head>
+ <body>
+  <div id="title" class="">
+	梦李白二首·其二
+  </div>
+  <div id="writer" class="">
+	[杜甫]
+  </div>
+  <div id="content1" class="">
+	浮云终日行，游子久不至。
+    三夜频梦君，情亲见君意。
+    告归常局促，苦道来不易。
+    江湖多风波，舟楫恐失坠。
+ 
+	出门搔白首，若负平生志。
+    冠盖满京华，斯人独憔悴。
+    孰云网恢恢，将老身反累。
+    千秋万岁名，寂寞身后事。	
+  </div>
+  <div id="bg" class="">
+	唐诗
+  </div>
+ 
+
+ </body>
+</html>

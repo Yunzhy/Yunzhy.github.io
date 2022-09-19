@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ <style type="text/css">
+    body{
+	    width:600px;
+		font-size:30px;
+		height:500px;
+	}
+	div{
+	    border:3px solid pink;
+		overflow:hidden;
+		padding:1%;
+        margin:5%;
+	}
+	
+	#header{
+	       height:15%;
+		   color:red;
+		   font-size:1.5em;
+		   background:url("zzz/light.png")no-repeat right;
+		   text-align:center;
+	}
+	#left{
+	      float:left;
+		  width:45%;
+          font-size:0.7em;
+		  text-indent:1em; 
+		  background-color:cyan;
+		  line-height:1.2em;
+		  height:75%;
+		  margin:0;
+		  margin-left:3%;
+		  margin-bottom:2%;
+	}
+	#right{
+	      float:right;
+	      text-indent:1em;
+		  font-size:0.7em;
+		  height:75%;
+		  background-color:cyan;
+		  line-height:1.2em;
+		  width:45%;
+		  margin:0;
+		  margin-bottom:2%;
+	}
+	#footer{
+	        height:5%;
+	        clear:both;
+			width:100%;
+			text-align:center;
+			margin-left:2%;
+			padding-top:1%;
+			font-size:0.8em;
+	}
+ </style> 
+ </head>
+ <body>
+  <div id="header" class="">
+  Pride And prejudice
+  </div>
+  <div id="left" class="">
+	IT is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters. 
+    "My dear Mr. Bennet," said his lady to him one day, "have you heard that Netherfield Park is let at last?" 
+	Mr. Bennet replied that he had not. 
+  </div>
+  <div id="right" class="">
+凡是有钱的单身汉，总想娶位太太，这已经成了一条举世公认的真理。这样的单身汉，每逢新搬到一个地方，四邻八舍虽然完全不了解他的性情如何，见解如何，可是，既然这样的一条真理早已在人们心目中根深蒂固，因此人们总是把他看作自己某一个女儿理所应得的一笔财产。 </p> <p>有一天班纳特太太对她的丈夫说：“我的好老爷，尼日斐花园终于租出去了，你听说过没有？”</p> <p>班纳特先生回答道，他没有听说过。</p> <p>“的确租出去了，”她说，“朗格太太刚刚上这儿来过，她把这件事的底细，一五一十地告诉了我。”</p> <p>班纳特先生没有理睬她。</p> <p>“你难道不想知道是谁租去的吗？”太太不耐烦地嚷起来了。</p> <p>“既是你要说给我听，我听听也无妨。”</p> <p>这句话足够鼓励她讲下去了。</p> <p>“哦！亲爱的，你得知道，郎格太太说，租尼日斐花园的是个阔少爷，他是英格兰北部的人；听说他星期一那天，乘着一辆驷马大轿车来看房子，看得非常中意，当场就和莫理斯先生谈妥了；他要在‘米迦勒节’以前搬进来，打算下个周未先叫几个佣人来住。”</p> <p>“这个人叫什么名字？”</p> <p>“彬格莱。”</p> <p>“有太太的呢，还是单身汉？”</p> <p>“噢！是个单身汉，亲爱的，确确实实是个单身汉！一个有钱的单身汉；每年有四五千磅的收入。真是女儿们的福气！”</p> <p>“这怎么说？关女儿女儿们什么事？”</p> <p>“我的好老爷，”太太回答道，“你怎么这样叫人讨厌！告诉你吧，我正在盘算，他要是挑中我们一个女儿做老婆，可多好！”
+  </div>
+  <div id="footer" class="">
+	傲慢与偏见
+  </div>
+ </body>
+</html>
