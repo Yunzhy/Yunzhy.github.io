@@ -1,108 +1,102 @@
 <!doctype html>
 <html lang="en">
+
  <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
 
-<!--   标签（搜索引擎） -->
-  <title>  
-  happy every day
-  </title>
+  <title>个人主页</title>
 
-<!-- //外观（style） -->
-  <style>  
-  
+  <style type="text/css">
+
   body{
-      background-color:#fdd; '背景颜色纯色
-	  margin:0;              'body元素的margin属性设为0，可以把页面设为全屏设定
+      background:url(../picture/p1.jpg);
 	  font-size:20px;
+	  font-family:方正舒体;
   }
-
   h1{
-    margin:0;
-	padding:2%;
-    font-size:40px;
-    color:pink;
-	text-align:center;	'文字居中
-    height:10px;
-	background:url(../picture/背景图1.jpg);
+      text-align:center;
+	  margin:4%;
+	  margin-bottom:0;
+	  margin-left:10%;
+	  font-size:1em;
   }
-
-'难点：给列表定位，利用position(absolute,relative)
-/*ol相当于列表list的父亲，类似于body*/
-  
-/*对列表的内容进行外观修饰*/
-  ol{}
-
-  ol li{
-	 font-size:1.5em;
-	 color:pink;
-     font-family:汉仪彩云体简;
-	 margin:10px;
-	 list-style-type:none;
-	 padding:10px;
+  p{
+      text-align:center;
+	  margin:4%;
+	  margin-bottom:6%;
+	  margin-left:10%;
   }
-
-  #right{
-       float:right;
-       text-align:center;
-	   height:100%;
-	   width:48%;
-	   margin:2%;
-	   padding:2%;
-	   font-size:40px;
-	   font-weight:bold;
-	   color:#ffb;
-	   border:2px solid #aaa;
-       background:url(../picture/背景图2.jpg);
+  ul{
+      list-style-type:none;
+	  text-align:center;
+	  margin-bottom:0;
   }
-
-
-  </style>  
+  ul li{
+      border:1px solid #aab;
+      display:inline;
+	  margin:3%;
+	  padding:1%;
+	  font-family:幼圆;
+/*	 将边框设置为椭圆形*/
+	  border-radius:50%;
+  }
+  a{
+     color:#fff;
+  }
+  #picture{
+     width:100px;
+     height:100px;
+     border:2px solid #abc;
+/*	 将边框设置为圆形*/
+	   border-radius:100%;
+     overflow:hidden;
+/*	 设置图片的位置*/
+	 position:relative;
+	 left:37%;
+	 top:20%;
+	 margin:10%;
+	 margin-bottom:0;
+  }
+  img{
+     max-height:100%; 
+  }
+  footer{
+     float:right;
+	 margin:6%;
+  }
+  </style>
 
  </head>
 
  <body>
 
-<!-- 大标题 -->
+<!--  个人头像的设置 -->
+  <div id="picture" class="">
+	<img src="../picture/p3.jpg" width="" height="" border="0" alt="">
+  </div>
 
- <h1>
-  Hello!
-<!--   在网页上使用图像之前，应该通过软件把图像处理为合适的尺寸 -->
- </h1> 
+<!-- 个人ID -->
+  <h1>不如我   便带你去看海<br></h1>
+  <p>向世界的远岸   披覆你我呐喊<br></p>
 
-<!--  创建无序列表ul li和有序列表 ol li-->
+<!--   创建无序列表，作为导航 -->
 
- <ol>
+  <ul>
+
+	<li><a href="简介.html">自序</a></li>
 	<li>
-<!--  在列表里面添加超链接，使得可以跳转到目的页面 -->
-	  <a href="https://github.com/Yunzhy/yunzhy.github.io">我的仓库</a>
+	<a href="https://github.com/Yunzhy/yunzhy.github.io/tree/main/%E4%BD%9C%E4%B8%9A1">作业</a>
 	</li>
-	<li>
-	  <a href="https://github.com/Yunzhy/yunzhy.github.io/tree/main/Test_3">作业共享</a>
-	</li>
-    <li>
-	  <a href="https://github.com/Yunzhy/yunzhy.github.io/tree/main/%E4%BD%9C%E4%B8%9A1">小小测试</a>
-	</li>
-	<li>
-	  <a href="">点击Tow</a>
-	</li>
-	<li>
-      <a href="">点击Three</a>
-	</li>
- </ol>
+    <li><a href="二维码.html">二维码</a></li>
+  </ul>
 
-<!--  在body里面设置盒状模型，左右 -->
-
- <div id="right" class="">
-	欢迎来到Yun的网站~
- </div>
-
- <div id="h1" class="">
-	
- </div>
-  <p>
-  </p>
-
+<!-- 页脚 -->
+  <footer>
+   @ 2022 designed by  Yun_zhy
+  </footer>
  </body>
 </html>
