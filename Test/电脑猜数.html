@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+ <head>
+
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+
+  <title>对页面元素的控制</title>
+
+<!-- 外观 -->
+  <style type="text/css">
+	
+  </style>
+
+ </head>
+ <body>
+<!--  文字提示 -->
+  <p>
+  从0到999，请你写下一个数字。最多十次，电脑就可以猜中<br>
+  敢不敢来赌一赌！
+  </p>
+  
+  <h1>第1次</h1>
+  <h2>number<h2>
+
+<!--   按钮 -->
+  <input id="big"     type="button"   value="数字小了">
+  <input id="small"   type="button"   value="数字大了">
+  <input id="again"   type="button"   value="再来一局">
+
+  <script type="text/javascript">
+
+  //次数显示
+  var times=1;
+  //数字显示
+  var number=500;
+  var topNum = 1000 ;
+  var botNum = 0 ;
+  //数字小了
+  //选中input标签下的id为small的元素（对象）
+  var a1=document.queryElement("input#small");
+  var a2=document.queryElement("");
+  a1.onclick=function(){
+  while(times<=10){
+     topNum = Math.floor((botNum+topNum)/2);
+	 number =  Math.floor((botNum+topNum)/2);
+      a2.textContent=("");
+      times++;
+   }
+  }
+  //数字大了
+  //再来一局
+  
+  </script>
+ </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<!-- 二十以内的加减法 -->
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <style type="text/css">
+	div #problem{
+	    
+	}
+    div #answer{}
+	input{
+	    padding:1%;
+		margin:2.5%;
+	}
+	input #right{
+	    margin-left:30%;
+	}
+	button{
+	    padding:2%;
+		margin-left:5%;
+	}
+  </style>
+
+ </head>
+
+ <body>
+
+<!--   题目div区 -->
+  <div id="problem" class="">
+	   <input id="left" >
+	   <span class="">+</span>
+	   <input id="right">
+  </div>
+
+<!--   答案div区 -->
+  <div id="answer" class="">
+     A :  <input type="button" id="A">
+	 B :  <input type="button" id="B">
+     C :  <input type="button" id="C">
+	 D :  <input type="button" id="D">	
+  </div>
+
+ <script type="text/javascript">
+ var num1=parseInt(10* Math.random());
+ var num2=parseInt(10* Math.random());
+ alert(num1);
+ alert(num2);
+
+
+ //获取元素，给元素赋值产生的随机数
+ var num_1=document.querySelector("input#left");
+ 
+ var num_2=document.querySelector("input#right");
+ num_2.value=num2;
+ num_1.value=num1;
+
+//获取button里面的
+ var answers=document.querySelectorAll("div#answer input");
+     for (var i = 0;i < 4 ;i ++ )
+     {
+		 //产生答案的随机数answer
+		 var answer=parseInt(20*Math.random());
+		 //每产生一个随机数，传入到数组中进行赋值
+
+         answers[i].value=answer;
+		 answers[i].onclick=function(){
+		//随机数相加的结果和数组当前数据比较
+		 var result=num1+num2;
+		 var res=parseInt(this.value);
+		 if (res===result){
+             alert("ok");
+		  }
+		  else{
+		     alert("wrong");
+			 }
+	     };
+     }
+	 answers[3].value=num1+num2;
+ </script>
+ 
+ </body>
+</html>
