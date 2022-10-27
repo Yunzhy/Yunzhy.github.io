@@ -46,6 +46,12 @@
 		D :  <input type="button" id="D">	
   </div>
 
+
+  <!-- 下一题 -->
+  <div  id="next"  >
+       <input type="button" value="下一题" id="next">
+  </div>
+
  <script type="text/javascript">
 
 //产生随机数
@@ -54,37 +60,63 @@
        
 
 
- //获取元素，给元素赋值产生的随机数
+ //获取元素，把产生的随机数赋值给按钮框
 		var num_1=document.querySelector("input#left");
 		num_1.value=num1;
 		var num_2=document.querySelector("input#right");
 		num_2.value=num2;
+        answers=document.querySelectorAll("div#answer input")
+
+        var answer=num1+num2;
+
+		//利用循环放错误答案
+		for (var i = 0;i < 4 ;i ++ ){
+            
+			var ranNumber=parseInt(20*Math.random());
+			answers[i].value=ranNumber;
+
+			//是否回答正确
+			answers[i].onclick=function(){
+
+				var res=parseInt(this.value);	
+				//var res=parseInt(answers[i].value) ;
+				alert("你选的答案是："+res);
+				if(res==answer){
+
+					alert("ok");
+				}
+				else{
+					alert("wrong");
+				}
+          }
+		}
+ 
+		//产生一个随机数a，答案放入对应的数组中
+		//覆盖
+        var a=parseInt(4* Math.random());
+        answers[a].value=answer;
+
+		
+
+		//下一题
+		//捕捉next这个元素
+		var Next=document.querySelector("div#next input");
+		//页面的刷新
+		Next.onclick=function(){
+			window.location.reload();
+		}
 
 
-	
-		answers=document.querySelectorAll("div#answer input")
-		for (var i = 0;i < 4 ;i ++ )
-	 	{
-	 	 //产生答案的随机数answer
-		 var answer=parseInt(20*Math.random());
-		 //每产生一个随机数，传入到数组中进行赋值
-        
-		 
-         answers[i].value=answer;
-	 	 answers[i].onclick=function(){
-	 	//随机数相加的结果和数组当前数据比较
-	 	 var result=num1+num2;
-		 var res=parseInt(this.value);
-	 	 if (res===result){
-             alert("ok");
-	 	  }
-	 	  else{
-	 	     alert("wrong");
-	 		 }
-	      };
-      }
-	  answers[3].value=num1+num2;
+
+
+
+
+
+
+
+	 	 
  </script>
  
  </body>
 </html>
+
