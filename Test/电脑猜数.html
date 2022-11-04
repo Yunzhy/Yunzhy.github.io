@@ -2,58 +2,107 @@
 <html lang="en">
  <head>
 
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
 
-  <title>对页面元素的控制</title>
+    <title>电脑猜数</title>
 
-<!-- 外观 -->
-  <style type="text/css">
-	
-  </style>
+  <!-- 外观 -->
+    <style type="text/css">
+    
+    </style>
 
  </head>
+
+
  <body>
-<!--  文字提示 -->
-  <p>
-  从0到999，请你写下一个数字。最多十次，电脑就可以猜中<br>
-  敢不敢来赌一赌！
-  </p>
+
+    <p>
+    从0到999，请你写下一个数字。最多十次，电脑就可以猜中<br>
+    敢不敢来赌一赌！
+    </p>
+    
+    
+    <span id="times">第1次</span>
+    <h1 id="num">500</h1>
+
+    <input id="big"     type="button"   value="数字大了">
+    <input id="small"   type="button"   value="数字小了">
+    <input id="again"   type="button"   value="再来一局">
   
-  <h1>第1次</h1>
-  <h2>number<h2>
 
-<!--   按钮 -->
-  <input id="big"     type="button"   value="数字小了">
-  <input id="small"   type="button"   value="数字大了">
-  <input id="again"   type="button"   value="再来一局">
 
-  <script type="text/javascript">
+    <script type="text/javascript">
 
-  //次数显示
-  var times=1;
-  //数字显示
-  var number=500;
-  var topNum = 1000 ;
-  var botNum = 0 ;
-  //数字小了
-  //选中input标签下的id为small的元素（对象）
-  var a1=document.queryElement("input#small");
-  var a2=document.queryElement("");
-  a1.onclick=function(){
-  while(times<=10){
-     topNum = Math.floor((botNum+topNum)/2);
-	 number =  Math.floor((botNum+topNum)/2);
-      a2.textContent=("");
-      times++;
-   }
-  }
-  //数字大了
-  //再来一局
+    //次数显示
+    var times=1;
+    //数字显示
+    var number=500;
+    var topNum = 1000 ;
+    var botNum = 0 ;
+
+
+    //数字小了
+    //选中input标签下的id为small的元素（对象）
+    var Small=document.querySelector("input#small");
+    var Num=document.querySelector("h1#num");
+    var Times=document.querySelector("span#times");
+    
+    Small.onclick=function(){
   
+
+      //
+        botNum = number+1;
+        number =  Math.floor((botNum+topNum)/2);
+        Num.textContent="我猜"+number;
+        times++;
+        Times.textContent="第"+times+"次";
+        cheat();
+      
+    }//end of onclick 数字小了
+
+
+    //数字大了
+    //选中input标签下的id为big的元素（对象）
+    var Big=document.querySelector("input#big");
+    
+    Big.onclick=function(){
+
+      //上限变小
+        topNum = Math.floor((botNum+topNum)/2);
+        number =  Math.floor((botNum+topNum)/2);
+        Num.textContent="我猜"+number;
+        times++;
+        Times.textContent="第"+times+"次";
+        cheat();
+        
+      }//end of onclick 数字大了
+
+      //再来一局
+      //捕捉next这个元素
+      var Next=document.querySelector("input#again");
+      //页面的刷新
+      Next.onclick=function(){
+        number = 500 ;
+	      botNum = 0 ;
+        topNum =1000 ;
+        times =1 ;
+        Times.textContent = "第" + times + "次" ;
+        Num.textContent = "我猜：" + number ;
+      
+        }
+        function cheat(){
+          if(times>10){
+            Num.textContent="你耍赖了！罚你变成周狗蛋"
+            times=10;
+
+          }
+        }
   </script>
+   
  </body>
 </html>
+
