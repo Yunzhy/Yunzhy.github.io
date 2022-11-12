@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+ <head>
+
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width; initial-scale=1.4; minimum-scale=1.0; maximum-scale=2.0"/>
+
+  <title>自序</title>
+
+  <style type="text/css">
+	
+    body{
+        background-image: url(../Test_1/picture/p4.jpg); 
+        font-size: 30px;
+        
+    }
+
+    div{
+        background-color: grey;
+        
+    }
+
+    div#picture{
+
+        /*	 将边框设置为圆形*/
+        border-radius:100%;
+        overflow:hidden;
+        /* 设置头像大小 */
+        width:100px;
+        height:100px;
+        /* 设置position */
+        margin:5%;
+
+    }
+
+
+    div#left_list{
+
+        float:left;
+        width:200px;
+        height:500px;
+
+    }
+
+
+    /* 设置大头贴样式 */
+    div#right{
+
+        /*	 将边框设置为圆形*/
+        border-radius:0;
+        overflow:hidden;
+        /* 设置头像大小 */
+        width:100px;
+        height:100px;
+        /* 设置position */
+        position: relative;
+        left:20%;
+        top:0;
+
+    }
+
+	img{
+	    max-height:100%; 
+	}
+
+
+    /* 列表样式 */
+	ul{
+        list-style-type:none;
+        opacity: 80%;
+  }
+
+
+    /* 列表的li样式 */
+    li{
+        margin-top:30%;
+        text-align: center;
+    }
+
+    /* 右边的文字样式 */
+    p{
+        font-size: 1em;
+        position: relative;
+        left:10%;
+        top:0;
+    }
+  </style>
+
+ </head>
+
+ <body>
+
+  
+<!--   创建一个左边导航栏 个人资料，照片集-->
+    <div id="picture" class="">
+<!-- 	头像 -->
+        <img src="../Test_1/picture/p3.jpg" width="" height="" border="0" alt="">
+
+    </div>
+
+
+
+
+
+	<div id="left_list" class="">
+<!-- 无序列表 -->
+     <ul>
+		<li>
+            <a href="index.html">主页</a>
+        </li>
+		<li>个人</li>
+		<li>收藏</li>
+     </ul>
+	</div>
+
+
+
+
+<!-- 右边内容 -->
+     <p>个人：</p>
+     <div id="right"><img src="../Test_1/picture/p6.jpg" alt=""></div>
+     <p>收藏：待续</p>
+ </body>
+</html>
