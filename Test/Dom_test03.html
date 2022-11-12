@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1" >
+        <title>onmouseover事件触发对象随机散落</title>
+        <!-- window.innerWidth 和window.innerHeight可以获取用户的浏览器窗口信息。 -->
+        <style>
+
+            div{
+                width:20%;
+                height: 20%;
+                border: 2px solid;
+                display: block;
+                background-color: aqua;
+                position: absolute;
+                top:10%;
+                left:0;
+                /* 鼠标经过有小手样式 */
+                cursor: pointer;
+                margin: 1em;
+                padding: 0.5em;
+            }
+            div p{
+                color: white;
+                opacity: 5;
+                background-color:mediumslateblue;
+                position: relative;
+                top:30%;
+                left: 5%; 
+                text-align: center;
+            }
+            div.male{
+                border-radius: 10%;
+                border-color: cornsilk;
+            }
+            div.female{
+                border-radius: 50%;
+                border-color:hotpink; 
+            }
+        </style>
+        <script type="text/javascript">
+            //构造函数
+            function Person(name,age,male){
+                this.name=name;
+                this.age=age;
+                this.male=male;
+                //
+                this.divDom=null;
+
+                    //goOut方法设置dom元素对象的xy在屏幕范围内随机
+                    this.goOut=function(){
+                    // 随机产生xy
+                    var randX=window.innerWidth*0.6*Math.random();
+                    var randy=window.innerHeight*0.6*Math.random();
+
+                    // 将产生的xy坐标赋值给divDom对象的样式控制
+                    this.divDom.style.left=randX+'px';
+                    this.divDom.style.top=randy+'px';
+                };//end of goOut function
+
+                    this.addToDom=function(){
+                        var div =document.createElement('div');
+                        var p=document.createElement('p');
+                        p.textContent=this.name+"-"+this.age;
+                        div.appendChild(p);
+                        this.male?div.className="male":div.className="female";
+
+                        // 设定dom元素的属性model，指向代表本内存对象本身
+                        div.model=this;
+                        div.onmouseover=function(){
+                            this.model.goOut();
+                        };//end of function onmouseover
+
+                        this.divDom=div;
+                        document.body.appendChild(div);
+                    
+                    };//end of addToDom function
+        
+
+            }//end of function Person
+
+            //  将产生的对象放在数组中并随机产生name、age、male
+                var student=[];
+                const stuNum=50;
+                var male,name,age;
+                for(var i=0;i<stuNum;i++){
+
+                    male=Math.random()>0.5?true:false;
+                    if(male){
+                        name="boy"+i;
+                        age=20+Math.floor(Math.random()*20);
+                    }
+                    else{
+                        name="girl"+i;
+                        age=18+Math.floor(Math.random()*10);
+                    }
+                    // 将产生的对象添加到数组中
+                    student[i]=new Person(name,age,male);
+                }//end og loop
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // 给对象创建编号
+            var countBoy=0;
+            var countgirl=0;
+            // 从编号最大的开始创建页面的div元素，200个div元素重叠在一起，这样也让编号最小的放在最上面
+            for(var i =stuNum-1 ;i >= 0 ; i--){
+                
+                if(student[i].male){
+                    countBoy++;
+                }
+                if(!student[i].male){
+                    countgirl++;
+                }
+                student[i].addToDom();
+            }
+            // 输出对象  
+            console.log("There are"+countBoy+"boys");  
+            console.log("There are"+countgirl+"girls");
+        </script>
+    </body>
+</html>
