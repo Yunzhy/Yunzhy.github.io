@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>onmouseover事件</title>
+
+        <style>
+
+            div{
+
+                width:20%;
+                height:20%;
+                border-color: aqua;
+                background-color: rgba(55,0,0,0.1);
+                display: inline-block;
+                margin: 2%;
+                position: absolute;
+                border-radius: 20%;
+                text-align: center;
+                padding: 1%;
+                /* 图片处理 */
+                /* background: url(../picture/p3.jpg); */
+                transition: all 1.5s;
+        
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+
+            var s="你点到我啦";
+
+            for(let i=0;i<50;i++){
+
+            //创建元素 
+            let divDom=document.createElement('div');
+            //给div容器添加内容
+            divDom.textContent=s;
+            //调用定位函数，实现每个div随机定位
+            randPosition(divDom);
+
+            //将产生的每个对象(this代指divDom)对应存储在该对象的一个自定义属性中
+            divDom.model=this;
+            divDom.onmouseover=function(){
+                
+                //直接对该对象的属性调用函数randPosition
+                //this代指divDom,所以也可以写成this.model.randPosition(divDom)
+                divDom.model.randPosition(divDom);
+
+
+                //也可以直接调用randPosition(divDom);
+            }
+
+            //将div元素添加到页面
+            document.body.appendChild(divDom);
+            
+           
+        }
+        
+            function randPosition(dom){
+                var x=Math.floor(Math.random()*600);
+                var y=Math.floor(Math.random()*600);
+        
+                dom.style.left=x+'px';
+                dom.style.top=y+'px';
+            };
+
+        </script>
+       
+    </body>
+
+</html>
