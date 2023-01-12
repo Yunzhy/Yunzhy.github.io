@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>《Web前端开发》课程考试题(2022)参考效果</title>
+        <style type="text/css">
+
+            body{
+
+                background-color:rgb(250, 249, 237);
+                
+            }
+            div{
+
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+                background-color: rgba(143, 188, 188, 0.1);
+                text-align: center;
+                margin: 5%;
+                padding: 2%;
+                border-radius: 50%;
+                position: absolute;
+                transition: all 1s ;
+
+            }
+            div.bd{
+
+                background-color:rgba(0,100,100,0.05); 	
+                border:0px solid ; 	
+                border-radius: 0% ; 
+            
+
+                } 
+            div p {
+
+                margin: auto; 
+                padding: 10%; 
+                color:rgb(182, 222, 34); 
+                text-align:center; 
+                text-shadow:1px 1px rgb(19, 17, 22); 
+
+                } 	 
+        </style>
+ 
+    </head>
+
+    <body>
+
+        <script>
+
+            var bodyWidth=window.innerWidth;
+            var bodyHeight=window.innerHeight;
+            document.body.style.width=bodyWidth+'px';
+            document.body.style.height=bodyHeight+'px';
+           
+            const NUMS = 8 ; 
+            var tsBalls = [] ; 
+            var sn = 0 ; 
+            //var S=[    ' "文章千古事","得失寸心知。","作者皆殊列，名声岂浪垂。","骚人嗟不见，汉道盛于斯。","前辈飞腾入，馀波绮丽为。","后贤兼旧列，历代各清规。","法自儒家有，心从弱岁疲。","永怀江左逸，多病邺中奇。","騄骥皆良马，骐驎带好儿。","车轮徒已斫，堂构惜仍亏。","漫作潜夫论，虚传幼妇碑。","缘情慰漂荡，抱疾屡迁移。","经济惭长策，飞栖假一枝。","尘沙傍蜂虿，江峡绕蛟螭。","萧瑟唐虞远，联翩楚汉危。","圣朝兼盗贼，异俗更喧卑。","郁郁星辰剑，苍苍云雨池。","两都开幕府，万宇插军麾。","南海残铜柱，东风避月支。","音书恨乌鹊，号怒怪熊罴。","稼穑分诗兴，柴荆学土宜。","故山迷白阁，秋水隐黄陂。","不敢要佳句，愁来赋别离。","文章千古事","得失寸心知。","作者皆殊列，名声岂浪垂。","骚人嗟不见，汉道盛于斯。","前辈飞腾入，馀波绮丽为。","后贤兼旧列，历代各清规。","法自儒家有，心从弱岁疲。","永怀江左逸，多病邺中奇。","騄骥皆良马，骐驎带好儿。","车轮徒已斫，堂构惜仍亏。","漫作潜夫论，虚传幼妇碑。","缘情慰漂荡，抱疾屡迁移。","经济惭长策，飞栖假一枝。","尘沙傍蜂虿，江峡绕蛟螭。","萧瑟唐虞远，联翩楚汉危。","圣朝兼盗贼，异俗更喧卑。","郁郁星辰剑，苍苍云雨池。","两都开幕府，万宇插军麾。","南海残铜柱，东风避月支。","音书恨乌鹊，号怒怪熊罴。","稼穑分诗兴，柴荆学土宜。","故山迷白阁，秋水隐黄陂。","不敢要佳句，愁来赋别离。","文章千古事","得失寸心知。","作者皆殊列，名声岂浪垂。","骚人嗟不见，汉道盛于斯。","前辈飞腾入，馀波绮丽为。","后贤兼旧列，历代各清规。","法自儒家有，心从弱岁疲。","永怀江左逸，多病邺中奇。","騄骥皆良马，骐驎带好儿。","车轮徒已斫，堂构惜仍亏。","漫作潜夫论，虚传幼妇碑。","缘情慰漂荡，抱疾屡迁移。","经济惭长策，飞栖假一枝。","尘沙傍蜂虿，江峡绕蛟螭。","萧瑟唐虞远，联翩楚汉危。","圣朝兼盗贼，异俗更喧卑。","郁郁星辰剑，苍苍云雨池。","两都开幕府，万宇插军麾。","南海残铜柱，东风避月支。","音书恨乌鹊，号怒怪熊罴。","稼穑分诗兴，柴荆学土宜。","故山迷白阁，秋水隐黄陂。","不敢要佳句，愁来赋别离。","文章千古事","得失寸心知。","作者皆殊列，名声岂浪垂。","骚人嗟不见，汉道盛于斯。","前辈飞腾入，馀波绮丽为。","后贤兼旧列，历代各清规。","法自儒家有，心从弱岁疲。","永怀江左逸，多病邺中奇。","騄骥皆良马，骐驎带好儿。","车轮徒已斫，堂构惜仍亏。","漫作潜夫论，虚传幼妇碑。","缘情慰漂荡，抱疾屡迁移。","经济惭长策，飞栖假一枝。","尘沙傍蜂虿，江峡绕蛟螭。","萧瑟唐虞远，联翩楚汉危。"'];
+            const S = ['20203030  钟宏云   文章千古事  ，得失寸心知  。作者皆殊列  ，名声岂浪垂  。骚人嗟不见  ，汉道盛于斯  。前辈飞腾入  ，馀波绮丽为  。后贤兼旧列  ，历代各清规  。法自儒家有  ，心从弱岁疲  。永怀江左逸  ，多病邺中奇  。' , '20203030  钟宏云   绝代有佳人  ，幽居在空谷  。自云良家子  ，零落依草木  。关中昔丧乱  ，兄弟遭杀戮  。官高何足论  ，不得收骨肉  。世情恶衰歇  ，万事随转烛  。夫婿轻薄儿  ，新人美如玉  。合昏尚知时  ，鸳鸯不独宿。但见新人笑，那闻旧人哭！在山泉水清，出山泉水浊。侍婢卖珠回，牵萝补茅屋。摘花不插发，采柏动盈掬。天寒翠袖薄，日暮倚修竹。'] ;
+            //移动鼠标或者手指滑动，对每一个div对象进行重新定位
+            document.body.onmousemove = document.body.ontouchmove = function(){ 
+
+            for(let ball of tsBalls){ 
+
+                ball.setPositionDiv() ; 
+                
+                } 
+
+            };
+
+            //单击，对每一个div对象进行随机定位
+            document.body.onclick = function(){ 
+
+            for(let ball of tsBalls){ 
+
+                ball.randPositionDiv() ; 
+
+                } 
+            }; 
+            //双击鼠标，改变字符串数组的索引
+            document.body.ondblclick = function(){ 
+
+            console.log('double click'); 
+            for(let ball of tsBalls){ 
+
+                //removeChild方法删除首个项目（首个结点）
+                this.removeChild(ball.dom) ;
+
+            } 
+
+            tsBalls = [] ; 
+                //如果字符数组遍历到最后重新赋值sn = 0，重新遍历；否则继续向下遍历
+            sn === S.length -1 ? sn = 0 : sn++ ; 
+            for(var i=0 ;i < S[sn].length ; i++){ 
+
+                    //
+                    var x0 = i % NUMS ; 
+                    var y0 = Math.floor ( i / NUMS ) ; 
+                    var ballObj = new Ball( x0 , y0 ) ; 
+                    //
+                    ballObj.createDivDom(S[sn][i]) ; 
+                    ballObj.randPositionDiv() ; 
+                    tsBalls.push(ballObj) ; 
+
+                } 
+            }; 
+
+            //通过计算r来改变对象大小
+            var r = bodyWidth > bodyHeight ? bodyHeight / (NUMS*3/2) : bodyWidth / (NUMS*3/2) ; 
+            //
+            for(var i=0 ;i < S[sn].length ; i++){ 
+
+                var x0 = i % NUMS ; 
+                var y0 = Math.floor ( i / NUMS ) ; 
+                var ballObj = new Ball( x0 , y0 ) ; 
+                ballObj.createDivDom(S[sn][i]) ; 
+                ballObj.randPositionDiv() ; 
+                tsBalls.push(ballObj) ; 
+
+            } 
+
+            //创建元素对象
+            function Ball(x0 , y0){
+
+                this.x0 = x0 ; 
+                this.y0 = y0 ; 
+                this.dom = null ; 
+                this.createDivDom = function(s){ 
+
+                var divDom = document.createElement('div') ; 
+                var pDom = document.createElement('p') ; 
+                pDom.textContent = s ; 
+                pDom.style.fontSize = r/2 + 'px' ; 
+                divDom.style.width = divDom.style.height = r + 'px' ; 
+                if(this.x0 === 7 || this.x0 === 11 ){
+
+                        divDom.className = 'bd' ; 
+                } 
+                divDom.appendChild(pDom) ; 
+				document.body.appendChild(divDom) ; 
+                this.dom = divDom ; 
+
+                }; 
+
+                //随机定位函数
+                this.randPositionDiv = function(){ 
+
+                    var x = Math.floor(Math.random() * bodyWidth ) ; 
+                    if( x >= bodyWidth - r){
+                            x = bodyWidth - r ; 
+                    } 
+                    var y = Math.floor( Math.random() * bodyHeight ); 
+                    if( y >= bodyHeight - r){ 
+                        y = bodyHeight - r ; 
+                    } 
+                    this.dom.style.left = x + 'px' ; 
+                    this.dom.style.top = y + 'px' ; 
+
+                } ; 
+
+                //排列函数
+                this.setPositionDiv = function(){ 
+
+                    var x = parseInt(this.x0) * r * 1.2 ; 
+                    var y = parseInt(this.y0) * r * 1.2 ; 
+                    this.dom.style.left = x + r + 'px' ; 
+                    this.dom.style.top = y + r + 'px' ; 
+
+                } ; 
+            }; 
+        </script>
+
+    </body>
+</html>
