@@ -11,10 +11,10 @@
 
   body{
     
-    background-image:url("../Test_1/picture/p1.jpg");
+    
 	  font-size:20px;
 	  font-family:方正舒体;
-    margin:0px;
+    /* margin:0px; */
     background: url(../Test_1/picture/p1.jpg) no-repeat;
     /* 图片全屏化 */
     background-size:100% 100%;
@@ -25,36 +25,46 @@
   h1{
 
     text-align:center;
-	  margin:4%;
-	  margin-bottom:0;
-	  margin-left:10%;
+    position: absolute;
+    top:50% ;
+    left:42% ;
 	  font-size:1em;
     
   }
   p{
-      text-align:center;
-	  margin:4%;
-	  margin-bottom:6%;
-	  margin-left:10%;
+
+    text-align:center;
+    position: absolute;
+    top:58% ;
+    left:42% ;
+
   }
   ul{
+
       list-style-type:none;
-	  text-align:center;
-	  margin-bottom:0;
+	    text-align:center;
+	  
   }
   ul li{
+
       border:1px solid #aab;
-      display:inline;
-	  margin:3%;
-	  padding:1%;
-	  font-family:幼圆;
-/*	 将边框设置为椭圆形*/
-	  border-radius:50%;
+      display:inline-block;
+      margin:35% 5% 5% 5%;
+      padding:1%;
+      font-family:幼圆;
+  /*	 将边框设置为椭圆形*/
+      border-radius:50%;
+      top:80% ;
+      left:40% ;
+
   }
   a{
+
      color:#fff;
+
   }
   #picture{
+    
      width:100px;
      height:100px;
      border:2px solid #abc;
@@ -62,18 +72,23 @@
 	   border-radius:100%;
      overflow:hidden;
 /*	 设置图片的位置*/
-	 position:relative;
-	 left:37%;
-	 top:20%;
-	 margin:10%;
-	 margin-bottom:0;
+      position:absolute;
+      left:45%;
+      top:25%;
+	
   }
   img{
+
      max-height:100%; 
+     
   }
   footer{
+
      float:right;
-	 margin:6%;
+     position: absolute;
+      top:90% ;
+      right:15% ;
+
   }
   </style>
 
